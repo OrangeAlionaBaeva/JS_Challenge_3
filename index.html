@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <script src="./script.js"></script>
+    <style>
+        body {
+            font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+        }
+        
+        .calculations,
+        .test {
+            display: flex;
+            width: 85%;
+            margin: 0 auto;
+            padding-top: 50px;
+            justify-content: space-around;
+        }
+        
+        .test {
+            line-height: 36px;
+            font-size: 20px;
+        }
+        
+        .results>div {
+            padding-top: 10px;
+        }
+        
+        table {
+            font-size: 14px;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        
+        th,
+        td:first-child {
+            padding: 10px 20px;
+        }
+        
+        th,
+        td {
+            border-style: solid;
+            border-width: 1px;
+        }
+        
+        th:first-child,
+        td:first-child {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="test">
+        Steven tip calculator
+        <br> Tip 15% if the bill value is between 50$ and 300$
+        <br> Tip 20% if the bill value is any other
+    </div>
+
+    <div class="calculations">
+        <div class="data">
+            <h2>Please, enter the amount of the check</h2>
+            <br>Client check 1:
+            <input type="text" id="clientCheckValue" placeholder="0" value=""> $
+            <br>
+            <br>Client check 2:
+            <input type="text" id="clientCheckValueSecond" placeholder="0" value=""> $
+            <br>
+            <br>Client check 3:
+            <input type="text" id="clientCheckValueThird" placeholder="0" value=""> $
+            <br>
+            <br><br>
+            <button onclick="calcTip()">CALCULATE TIP </button>
+            <button onclick="myFunctionRefresh()">RESET</button>
+        </div>
+
+        <div class="results">
+            <h2>Calculations of Steven's TIP</h2>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Client check</th>
+                    <th>Steven's TIPS</th>
+                    <th>TOTAL check & TIPS</th>
+
+                </tr>
+                <tr>
+                    <td>Client check 1:</td>
+                    <td id="clientCheckValuePrint"></td>
+                    <td id="stevenTips"></td>
+                    <td id="totalPrice"></td>
+
+                </tr>
+
+                <tr>
+                    <td>Client check 2:</td>
+                    <td id="clientCheckValuePrintSecond"></td>
+                    <td id="stevenTipsSecond"></td>
+                    <td id="totalPriceSecond"></td>
+
+                </tr>
+
+                <tr>
+                    <td>Client check 3:</td>
+                    <td id="clientCheckValuePrintTrird"></td>
+                    <td id="stevenTipsThird"></td>
+                    <td id="totalPriceThird"></td>
+
+                </tr>
+
+                <tr>
+                    <td>TOTAL</td>
+                    <td></td>
+                    <td id="stevenTipsTotal"></td>
+                    <td></td>
+
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
